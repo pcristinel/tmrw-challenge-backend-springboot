@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: tmrw-challenge-backend-springboot
+  liquibase:
+    change-log: db/db.changelog-master.xml
+  datasource:
+    username: postgres
+    password: postgres
+    url: jdbc:postgresql://localhost:5432/tmrw-challenge
+  jpa:
+    hibernate:
+      ddl-auto: validate

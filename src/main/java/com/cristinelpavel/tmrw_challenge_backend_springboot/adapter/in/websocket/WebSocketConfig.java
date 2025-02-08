@@ -1,4 +1,4 @@
-package com.cristinelpavel.tmrw_challenge_backend_springboot.adapter.websocket;
+package com.cristinelpavel.tmrw_challenge_backend_springboot.adapter.in.websocket;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Configuration;
@@ -16,7 +16,7 @@ public class WebSocketConfig implements WebSocketConfigurer {
   @Override
   public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
     registry
-        .addHandler(documentEditWebSocketHandler, "/document-edit")
+        .addHandler(documentEditWebSocketHandler, "/document")
         .setAllowedOrigins("*");
   }
 }
