@@ -15,9 +15,9 @@ public class NoProdEnvDataLoader {
 
   @Bean
   public CommandLineRunner documentsDataLoader(DocumentPersistenceOutPort documentPersistenceOutPort) {
-    Document document1 = Document.builder().id(UUID.fromString("0194e61a-dc22-79f8-8849-32abc2fe1be6")).title("Document 1").build();
-    Document document2 = Document.builder().id(UUID.fromString("0194e61a-dc22-7172-af80-6506756f49b3")).title("Document 2").build();
-    Document document3 = Document.builder().id(UUID.fromString("0194e61a-dc22-7b12-afee-3e0c1b3c9b4d")).title("Document 3").build();
+    Document document1 = Document.builder().id(UUID.fromString("0194e61a-dc22-79f8-8849-32abc2fe1be6")).title("Document 1").content("").build();
+    Document document2 = Document.builder().id(UUID.fromString("0194e61a-dc22-7172-af80-6506756f49b3")).title("Document 2").content("").build();
+    Document document3 = Document.builder().id(UUID.fromString("0194e61a-dc22-7b12-afee-3e0c1b3c9b4d")).title("Document 3").content("").build();
 
     List<Document> documentsToBeSaved = List.of(document1, document2, document3);
 

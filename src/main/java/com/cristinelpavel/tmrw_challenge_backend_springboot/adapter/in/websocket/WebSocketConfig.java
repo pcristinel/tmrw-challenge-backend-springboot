@@ -16,7 +16,7 @@ public class WebSocketConfig implements WebSocketConfigurer {
   @Override
   public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
     registry
-        .addHandler(documentEditWebSocketHandler, "/document")
+        .addHandler(documentEditWebSocketHandler, "/documents/{documentId}/edit")
         .setAllowedOrigins("*");
   }
 }

@@ -34,10 +34,10 @@ public class DocumentPersistenceAdapter implements DocumentPersistenceOutPort {
   }
 
   @Override
-  public List<Document> findAll() {
-    return documentRepository.findAll()
+  public List<Document> findAllWithoutContent() {
+    return documentRepository.findAllWithoutContent()
         .stream()
-        .map(DocumentEntity::toDocument)
+        .map(document -> Document.builder().id(document.getId()).title(document.getTitle()).build())
         .toList();
   }
 }

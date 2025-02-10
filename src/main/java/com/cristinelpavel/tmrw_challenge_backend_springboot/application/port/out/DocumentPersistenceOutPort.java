@@ -37,5 +37,5 @@ public interface DocumentPersistenceOutPort {
    *
    * @return a list of all documents
    */
-  List<Document> findAll();
+  List<Document> findAllWithoutContent();
 }

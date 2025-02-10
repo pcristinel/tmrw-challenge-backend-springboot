@@ -28,7 +28,7 @@ public class DocumentQueryServiceImpl implements DocumentQueryService {
   }
 
   @Override
-  public List<Document> findAll() {
-    return documentPersistenceOutPort.findAll();
+  public List<Document> findAllWithoutContent() {
+    return documentPersistenceOutPort.findAllWithoutContent();
   }
 }

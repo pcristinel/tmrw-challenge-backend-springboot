@@ -20,5 +20,5 @@ public interface DocumentQueryService {
    *
    * @return a list of all documents
    */
-  List<Document> findAll();
+  List<Document> findAllWithoutContent();
 }
