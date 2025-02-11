@@ -12,3 +12,10 @@ spring:
       ddl-auto: validate
   jackson:
     default-property-inclusion: non_null
+
+#logging:
+#  level:
+#    org:
+#      hibernate:
+#        SQL: debug
+#        orm.jdbc.bind: trace

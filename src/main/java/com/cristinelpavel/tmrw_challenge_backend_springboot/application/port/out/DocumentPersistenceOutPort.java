@@ -12,17 +12,15 @@ public interface DocumentPersistenceOutPort {
    * Save a document
    *
    * @param document the document to be saved
-   * @return the saved document
    */
-  Document saveDocument(Document document);
+  void saveDocument(Document document);
 
   /**
    * Saves a list of documents
    *
    * @param documents the documents to be saved
-   * @return the saved documents
    */
-  List<Document> saveAll(List<Document> documents);
+  void saveAll(List<Document> documents);
 
   /**
    * Find a document by its id
@@ -38,4 +36,9 @@ public interface DocumentPersistenceOutPort {
    * @return a list of all documents
    */
   List<Document> findAllWithoutContent();
+
+  /**
+   * Finds all documents that need to be updated because they have new deltas
+   */
+  List<Document> findAllDocumentsWithNewDeltas();
 }

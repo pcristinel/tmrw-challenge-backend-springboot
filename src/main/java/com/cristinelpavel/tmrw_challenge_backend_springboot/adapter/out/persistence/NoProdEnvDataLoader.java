@@ -2,6 +2,7 @@ package com.cristinelpavel.tmrw_challenge_backend_springboot.adapter.out.persist
 
 import com.cristinelpavel.tmrw_challenge_backend_springboot.application.domain.model.Document;
 import com.cristinelpavel.tmrw_challenge_backend_springboot.application.port.out.DocumentPersistenceOutPort;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
 import org.springframework.boot.CommandLineRunner;
@@ -15,9 +16,24 @@ public class NoProdEnvDataLoader {
 
   @Bean
   public CommandLineRunner documentsDataLoader(DocumentPersistenceOutPort documentPersistenceOutPort) {
-    Document document1 = Document.builder().id(UUID.fromString("0194e61a-dc22-79f8-8849-32abc2fe1be6")).title("Document 1").content("").build();
-    Document document2 = Document.builder().id(UUID.fromString("0194e61a-dc22-7172-af80-6506756f49b3")).title("Document 2").content("").build();
-    Document document3 = Document.builder().id(UUID.fromString("0194e61a-dc22-7b12-afee-3e0c1b3c9b4d")).title("Document 3").content("").build();
+    Document document1 = Document.builder()
+        .id(UUID.fromString("0194e61a-dc22-79f8-8849-32abc2fe1be6"))
+        .title("Document 1")
+        .content("")
+        .lastUpdated(LocalDateTime.of(2025, 2, 10, 20, 14, 5, 99))
+        .build();
+    Document document2 = Document.builder()
+        .id(UUID.fromString("0194e61a-dc22-7172-af80-6506756f49b3"))
+        .title("Document 2")
+        .content("")
+        .lastUpdated(LocalDateTime.of(2025, 2, 10, 18, 18, 5, 99))
+        .build();
+    Document document3 = Document.builder()
+        .id(UUID.fromString("0194e61a-dc22-7b12-afee-3e0c1b3c9b4d"))
+        .title("Document 3")
+        .content("")
+        .lastUpdated(LocalDateTime.of(2025, 2, 10, 15, 14, 2, 99))
+        .build();
 
     List<Document> documentsToBeSaved = List.of(document1, document2, document3);
 

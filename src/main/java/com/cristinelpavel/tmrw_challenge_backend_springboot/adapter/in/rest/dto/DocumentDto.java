@@ -1,6 +1,7 @@
 package com.cristinelpavel.tmrw_challenge_backend_springboot.adapter.in.rest.dto;
 
 import com.cristinelpavel.tmrw_challenge_backend_springboot.application.domain.model.Document;
+import java.time.LocalDateTime;
 import java.util.UUID;
 import lombok.Builder;
 import lombok.Value;
@@ -12,6 +13,7 @@ public class DocumentDto {
   UUID id;
   String title;
   String content;
+  LocalDateTime lastUpdated;
 
   /**
    * Converts a Document to a DocumentDto.
@@ -23,6 +25,7 @@ public class DocumentDto {
         .id(document.getId())
         .title(document.getTitle())
         .content(document.getContent())
+        .lastUpdated(document.getLastUpdated())
         .build();
   }
 }
